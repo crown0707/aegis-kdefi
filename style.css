@@ -430,19 +430,30 @@ a:hover { color: var(--purple-light); }
 
 .benefit-item {
   text-align: center;
+  display: block;
+  color: var(--white);
+  padding: 14px 10px;
+  border-radius: 16px;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+a.benefit-item:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.10);
+  color: var(--white);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
 }
 
 .benefit-item .icon {
   font-size: 2.5rem;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   line-height: 1;
 }
 
 .benefit-item .name {
   font-weight: 700;
   font-size: 1.05rem;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   display: block;
   color: var(--white);
 }
@@ -451,6 +462,7 @@ a:hover { color: var(--purple-light); }
   color: rgba(255, 255, 255, 0.85);
   font-size: 0.88rem;
   line-height: 1.5;
+  display: block;
 }
 
 /* ============ CONTENT PAGE HEADER ============ */
@@ -968,6 +980,144 @@ footer a { color: var(--purple); }
   .calc-result .calc-value { font-size: 1.6rem; }
   .calc-chart-wrapper { height: 220px; }
 }
+
+/* ============ GLOSSARY PAGE ============ */
+.glossary-group {
+  margin-bottom: 36px;
+}
+.glossary-group h3 {
+  color: var(--purple);
+  font-size: 1.18rem;
+  font-weight: 800;
+  margin: 0 0 18px;
+  padding-left: 4px;
+  letter-spacing: -0.01em;
+}
+.glossary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+.term-card {
+  background: var(--white);
+  border: 1px solid var(--lavender-200);
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.term-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+.term-card .term-name {
+  font-weight: 800;
+  color: var(--purple);
+  font-size: 1.02rem;
+  display: block;
+  margin-bottom: 8px;
+}
+.term-card .term-desc {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  display: block;
+}
+
+/* ============ VIDEOS GALLERY PAGE ============ */
+.video-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 22px;
+  margin-bottom: 24px;
+}
+.video-gallery .video-container {
+  margin-bottom: 0;
+}
+.video-desc {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  margin: 14px 0 10px;
+}
+.video-related {
+  display: inline-block;
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 0.94rem;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+.video-related:hover { color: var(--purple-light); }
+.video-footnote {
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin: 28px 0 8px;
+  font-style: italic;
+}
+
+/* ============ MOBILE GUIDE STEPS ============ */
+.step-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  counter-reset: step;
+}
+.step-list li {
+  counter-increment: step;
+  padding: 10px 0 10px 44px;
+  position: relative;
+  color: var(--ink);
+  line-height: 1.55;
+}
+.step-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--purple), var(--purple-light));
+  color: var(--white);
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.92rem;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.30);
+}
+
+/* ============ RISKS PAGE EMPHASIS ============ */
+.danger-callout {
+  background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+  border: 1.5px solid #fecaca;
+  border-radius: 18px;
+  padding: 22px 26px;
+  margin: 8px 0 32px;
+  color: #7f1d1d;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.danger-callout strong { color: #b91c1c; }
+
+.success-box {
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border-left: 4px solid #10b981;
+  padding: 22px 26px;
+  border-radius: 16px;
+  margin: 22px 0;
+}
+.success-box .label {
+  font-weight: 800;
+  color: #065f46;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+.success-box p, .success-box li { color: #064e3b; }
+.success-box ul { margin: 0; }
 
 /* ============ KAKAO CHAT FLOATING BUTTON ============ */
 .kakao-chat-button {
