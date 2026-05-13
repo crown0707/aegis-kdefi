@@ -1181,6 +1181,203 @@ footer a { color: var(--purple); }
 .success-box p, .success-box li { color: #064e3b; }
 .success-box ul { margin: 0; }
 
+/* ============ AEGIS NAV LINK (special) ============ */
+.nav-links li a.nav-aegis {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.96rem;
+  background: linear-gradient(135deg, #fbbf24 0%, #a855f7 55%, #6d28d9 100%);
+  background-size: 180% 100%;
+  background-position: 0% 50%;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.30), inset 0 0 0 1px rgba(255, 255, 255, 0.18);
+  letter-spacing: 0.01em;
+  padding: 9px 18px;
+  transition: background-position 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.nav-links li a.nav-aegis:hover {
+  color: var(--white);
+  background-position: 100% 50%;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(251, 191, 36, 0.30), 0 6px 18px rgba(124, 58, 237, 0.40);
+}
+
+/* ============ AEGIS HERO ============ */
+.aegis-hero {
+  background: linear-gradient(135deg, #fce7f3 0%, #e9d5ff 42%, #a855f7 100%);
+  padding: 80px 24px 96px;
+  position: relative;
+  overflow: hidden;
+}
+.aegis-hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.35), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.aegis-hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr minmax(280px, 420px);
+  gap: 48px;
+  align-items: center;
+  position: relative;
+}
+.aegis-hero-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  color: rgba(109, 40, 217, 0.7);
+  font-weight: 800;
+  margin-bottom: 28px;
+}
+.aegis-hero-title {
+  font-size: clamp(2.4rem, 7vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  color: #1e1b4b;
+  margin: 0 0 26px;
+}
+.aegis-gradient-text {
+  background: linear-gradient(135deg, #ec4899 0%, #a855f7 50%, #6d28d9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.aegis-hero-subtitle {
+  color: rgba(30, 27, 75, 0.78);
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0;
+}
+.aegis-hero-shield {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 24px 44px rgba(109, 40, 217, 0.30));
+}
+@media (max-width: 768px) {
+  .aegis-hero { padding: 56px 20px 64px; }
+  .aegis-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: center;
+  }
+  .aegis-hero-visual { order: -1; }
+  .aegis-hero-shield { max-width: 200px; }
+  .aegis-hero-title { font-size: clamp(2rem, 9vw, 2.5rem); }
+  .aegis-hero-subtitle { margin: 0 auto; }
+}
+
+/* ============ AEGIS CONCEPT CARDS ============ */
+.aegis-concepts {
+  padding: 56px 0 24px;
+}
+.aegis-concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+.aegis-concept-card {
+  background: var(--white);
+  border: 1px solid var(--lavender-200);
+  border-top: 4px solid var(--purple);
+  border-radius: 20px;
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-top-color 0.25s ease;
+}
+.aegis-concept-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+  border-top-color: #ec4899;
+  color: inherit;
+}
+.aegis-concept-card .concept-icon {
+  font-size: 2.4rem;
+  display: block;
+  margin-bottom: 14px;
+  line-height: 1;
+}
+.aegis-concept-card h3 {
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.aegis-concept-card .concept-sub {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 12px;
+  letter-spacing: 0.01em;
+}
+.aegis-concept-card p {
+  margin: 0 0 18px;
+  color: var(--ink-soft);
+  font-size: 0.94rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+.aegis-concept-card .concept-link {
+  display: inline-block;
+  color: var(--purple);
+  font-size: 0.88rem;
+  font-weight: 700;
+  border-top: 1px dashed var(--lavender-200);
+  padding-top: 14px;
+}
+
+/* ============ AEGIS ILLUSTRATION SECTIONS ============ */
+.aegis-illust-section {
+  padding: 16px 0 40px;
+  display: grid;
+  gap: 28px;
+}
+.aegis-illustration {
+  background: var(--white);
+  border: 1px solid var(--lavender-200);
+  border-radius: 22px;
+  padding: 28px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.aegis-illust-title {
+  margin: 0 0 18px;
+  color: var(--purple);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.aegis-illust-svg {
+  width: 100%;
+  overflow-x: auto;
+}
+.aegis-illust-svg svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.aegis-illust-caption {
+  margin: 16px 0 0;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
 /* ============ KAKAO CHAT FLOATING BUTTON ============ */
 .kakao-chat-button {
   position: fixed;
