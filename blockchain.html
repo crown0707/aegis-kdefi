@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>블록체인과 분산원장 — DeFi 진화의 역사</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand">💜 DeFi 진화의 역사</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </label>
+    <ul class="nav-links">
+      <li><a href="index.html">홈</a></li>
+      <li><a href="basics.html">기초</a></li>
+      <li><a href="blockchain.html" class="active">블록체인</a></li>
+      <li><a href="defi-1.html">DeFi 1.0</a></li>
+      <li><a href="defi-2.html">DeFi 2.0</a></li>
+      <li><a href="defi-3.html">DeFi 3.0</a></li>
+      <li><a href="summary.html">정리</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header class="page-header">
+    <span class="header-icon">⛓️</span>
+    <h1>블록체인과 분산원장</h1>
+    <p class="subtitle">신뢰를 코드와 합의로 만든다는 것</p>
+  </header>
+
+  <section class="section">
+    <span class="section-number">CHAPTER 02</span>
+    <h2>💻 노드(Node)란 무엇인가</h2>
+    <p>
+      전 세계 곳곳에 흩어져 있는 <strong>개인 컴퓨터</strong>들. 한국의 김 씨 컴퓨터, 미국의 존의 노트북, 독일의 데이터센터…
+      이들이 모두 같은 거래내역(원장)을 들고 있습니다.
+    </p>
+    <p>
+      누군가 새로운 거래를 만들면, 이 노드들은 거래가 유효한지 확인하고 자기 장부에 기록합니다.
+      이 과정에 중앙 서버는 없습니다. <strong>모두가 함께 검증</strong>합니다.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>📒 분산원장 기술</h2>
+    <p>
+      은행은 거래내역을 자기네 서버에만 보관합니다. 그래서 은행이 망하거나 해킹당하면 끝입니다.
+      반면 블록체인은 <strong>모든 노드가 같은 장부를 공유</strong>합니다. 누가 누구에게 얼마를 보냈는지, 모두가 동시에 알고 있습니다.
+    </p>
+
+    <div class="example">
+      <div class="ex-label">🎯 쉽게 이해하기</div>
+      <p style="margin-bottom:10px;">머스크가 트럼프에게 10달러를 보냈다고 합시다.</p>
+      <ul style="margin-bottom:0;">
+        <li><strong>🏦 중앙은행 방식</strong>: 은행 서버에만 기록 → 은행이 "그런 거래 없었다"고 하면 끝.</li>
+        <li><strong>⛓️ 블록체인 방식</strong>: 머스크 노드, 트럼프 노드, 푸틴 노드, 그리고 수만 개 다른 노드들이 동시에 기록. 푸틴이 자기 장부만 고쳐도 다른 모두의 장부와 다르니까 무시당함.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>🛡️ 51% 공격의 현실</h2>
+    <p>
+      이론적으로 전체 노드의 <strong>51% 이상을 동시에 해킹</strong>하면 조작이 가능합니다.
+      하지만 비트코인 기준 수만 개, 이더리움도 수십만 개의 검증자가 있습니다. 현실적으로 불가능에 가깝습니다.
+    </p>
+
+    <div class="highlight-box">
+      <span class="label">⭐ 신뢰의 출처가 다르다</span>
+      <p style="margin-bottom:0;">
+        은행은 "기관을 믿어달라"고 합니다.<br>
+        블록체인은 "<strong>수만 명이 동시에 거짓말할 수 없다</strong>"고 말합니다.
+      </p>
+    </div>
+  </section>
+
+  <nav class="page-nav">
+    <a href="basics.html">
+      <span class="label">← 이전</span>
+      <span class="title">💡 DeFi 기초</span>
+    </a>
+    <a href="defi-1.html" class="next">
+      <span class="label">다음 →</span>
+      <span class="title">📈 DeFi 1.0</span>
+    </a>
+  </nav>
+
+</div>
+
+<footer>
+  <p>📚 교육 목적으로만 제작된 사이트입니다. 투자 조언이 아닙니다.</p>
+</footer>
+
+</body>
+</html>

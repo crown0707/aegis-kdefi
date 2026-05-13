@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeFi 2.0 — DeFi 진화의 역사</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="index.html" class="brand">💜 DeFi 진화의 역사</a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger" aria-label="메뉴 열기">
+      <span></span><span></span><span></span>
+    </label>
+    <ul class="nav-links">
+      <li><a href="index.html">홈</a></li>
+      <li><a href="basics.html">기초</a></li>
+      <li><a href="blockchain.html">블록체인</a></li>
+      <li><a href="defi-1.html">DeFi 1.0</a></li>
+      <li><a href="defi-2.html" class="active">DeFi 2.0</a></li>
+      <li><a href="defi-3.html">DeFi 3.0</a></li>
+      <li><a href="summary.html">정리</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <header class="page-header">
+    <span class="header-icon">⚖️</span>
+    <h1>DeFi 2.0 — 올림푸스 다오</h1>
+    <p class="subtitle">유동성의 주인을 바꾸려 한 야심찬 실험</p>
+  </header>
+
+  <section class="section">
+    <span class="section-number">CHAPTER 04</span>
+    <h2>🏛️ 새로운 접근, OlympusDAO</h2>
+    <p>
+      DeFi 1.0의 문제를 해결하겠다며 2021년 등장한 것이 <strong>OlympusDAO(올림푸스 다오)</strong>입니다.
+      이들은 완전히 새로운 접근을 시도했습니다.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>🔒 프로토콜 소유 유동성 (POL)</h2>
+    <p>
+      "유동성을 빌리지 말고, <strong>우리가 직접 소유하자</strong>."
+      Protocol Owned Liquidity, 줄여서 <strong>POL</strong>. 프로젝트가 직접 LP 토큰을 보유함으로써 유동성을 영구히 잠그는 구조입니다.
+    </p>
+    <p>
+      이제 유동성 제공자가 떠나도 프로젝트는 흔들리지 않습니다. 유동성의 주인이 사용자가 아니라 <strong>프로토콜 자체</strong>이기 때문입니다.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>💎 본딩(Bonding)</h2>
+    <p>
+      그럼 어떻게 프로토콜이 LP를 모았을까요? 바로 <strong>본딩</strong>입니다.
+    </p>
+    <p>
+      사용자가 자산(예: DAI, ETH-OHM LP)을 프로토콜에 넘기면, 프로토콜은 <strong>할인된 가격</strong>에 OHM 토큰을 판매합니다.
+      이렇게 모인 자산은 트레저리(국고)에 쌓이고, 유동성은 프로젝트 자신이 소유합니다.
+    </p>
+
+    <div class="example">
+      <div class="ex-label">🔄 본딩의 흐름</div>
+      <ol style="margin: 8px 0 0 24px;">
+        <li>사용자가 100 DAI를 본드로 예치</li>
+        <li>프로토콜이 시장가보다 5% 싸게 OHM 토큰 지급 (며칠~몇 주에 걸쳐 분할 지급)</li>
+        <li>프로토콜은 100 DAI를 트레저리에 보관하거나 LP로 잠금</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>🎲 (3,3) 게임이론</h2>
+    <p>
+      올림푸스의 시그니처. 이 숫자는 게임이론에서 따왔습니다.
+    </p>
+    <p>
+      각 참여자는 세 가지 선택이 있습니다: <strong>스테이킹(+1), 본딩(+1), 매도(-1)</strong>.
+      두 참여자가 모두 스테이킹하면 (+1, +1) → 시너지가 더해져 <strong>(3,3)</strong>.
+      반대로 모두 매도하면 (-3,-3)이 됩니다.
+    </p>
+
+    <div class="highlight-box">
+      <span class="label">⭐ (3,3) 의 메시지</span>
+      <p style="margin-bottom:0;">
+        모두가 <strong>스테이킹</strong>을 선택하면 모두가 승리한다는 게임이론.<br>
+        "팔지 마, 같이 스테이킹하자, 그러면 우리 모두 부자가 된다" — 일종의 사회적 합의를 통한 가격 방어 시도였습니다.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>💥 결과는?</h2>
+    <div class="stats">
+      <div class="stat-card">
+        <span class="num">$1,400</span>
+        <span class="desc">최고가 (2021년 4월)</span>
+      </div>
+      <div class="stat-card">
+        <span class="num">$35</span>
+        <span class="desc">바닥 가격</span>
+      </div>
+      <div class="stat-card">
+        <span class="num">-97%</span>
+        <span class="desc">폭락 폭</span>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <span class="label">⚠️ 폰지 구조 비판</span>
+      <p style="margin-bottom:0;">
+        신규 자금 유입이 멈추는 순간, (3,3)은 (-3,-3)이 됩니다. 누군가는 먼저 팔고 나가야 하고, 그 순간 모두가 따라 나옵니다.
+        결국 <strong>후발 참여자의 자금으로 선발 참여자의 수익을 만드는 구조</strong>라는 비판을 피하지 못했습니다.
+      </p>
+    </div>
+
+    <p>
+      이 실패의 교훈 위에서, 다음 세대 — <strong>DeFi 3.0</strong> — 에 대한 논의가 시작됩니다.
+    </p>
+  </section>
+
+  <nav class="page-nav">
+    <a href="defi-1.html">
+      <span class="label">← 이전</span>
+      <span class="title">📈 DeFi 1.0</span>
+    </a>
+    <a href="defi-3.html" class="next">
+      <span class="label">다음 →</span>
+      <span class="title">🌐 DeFi 3.0</span>
+    </a>
+  </nav>
+
+</div>
+
+<footer>
+  <p>📚 교육 목적으로만 제작된 사이트입니다. 투자 조언이 아닙니다.</p>
+</footer>
+
+</body>
+</html>
