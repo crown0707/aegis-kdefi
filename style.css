@@ -857,6 +857,118 @@ footer a { color: var(--purple); }
   body::after { width: 320px; height: 320px; }
 }
 
+/* ============ COMPOUND INTEREST CALCULATOR ============ */
+.calculator-card {
+  background: linear-gradient(135deg, var(--white) 0%, var(--lavender-50) 100%);
+  border: 1px solid var(--lavender-200);
+  border-radius: 22px;
+  padding: 32px;
+  margin: 32px 0 40px;
+  box-shadow: var(--shadow);
+}
+.calculator-card h3 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  color: var(--purple);
+  letter-spacing: -0.01em;
+}
+.calc-help {
+  color: var(--ink-soft);
+  margin: 0 0 22px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.calc-inputs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+  margin-bottom: 22px;
+}
+.calc-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+.calc-inputs input {
+  appearance: none;
+  -moz-appearance: textfield;
+  border: 1.5px solid var(--lavender-200);
+  background: var(--white);
+  padding: 11px 14px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  font-family: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.calc-inputs input:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.12);
+}
+.calc-inputs input::-webkit-outer-spin-button,
+.calc-inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calc-result {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  padding: 18px 22px;
+  background: var(--white);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  border: 1px dashed var(--lavender-200);
+}
+.calc-result .calc-label {
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  font-weight: 700;
+}
+.calc-result .calc-value {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: -0.02em;
+}
+.calc-result .calc-multiplier {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--purple);
+  background: var(--lavender-100);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.calc-chart-wrapper {
+  position: relative;
+  height: 280px;
+  margin-bottom: 18px;
+}
+.calc-note {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin: 0;
+  line-height: 1.65;
+  padding: 12px 16px;
+  background: rgba(248, 113, 113, 0.06);
+  border-left: 3px solid #f87171;
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  .calculator-card { padding: 24px 20px; }
+  .calc-result .calc-value { font-size: 1.6rem; }
+  .calc-chart-wrapper { height: 220px; }
+}
+
 /* ============ KAKAO CHAT FLOATING BUTTON ============ */
 .kakao-chat-button {
   position: fixed;

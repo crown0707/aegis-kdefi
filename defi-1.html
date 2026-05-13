@@ -72,6 +72,35 @@
     </a>
   </div>
 
+  <div class="calculator-card">
+    <h3>📈 복리의 마법 계산기</h3>
+    <p class="calc-help">
+      DeFi Summer의 수익률을 직접 입력해보세요. 매월 복리로 굴렸을 때 자산이 어떻게 부풀어 오르는지 — 또는 왜 이런 수익률이 지속될 수 없는지 — 한눈에 보입니다.
+    </p>
+    <div class="calc-inputs">
+      <label>초기 투자 ($)
+        <input id="calc-principal" type="number" value="1000" min="0" step="100" inputmode="numeric">
+      </label>
+      <label>APY (%)
+        <input id="calc-apy" type="number" value="200" min="0" step="10" inputmode="numeric">
+      </label>
+      <label>기간 (개월)
+        <input id="calc-months" type="number" value="12" min="1" max="120" step="1" inputmode="numeric">
+      </label>
+    </div>
+    <div class="calc-result">
+      <span class="calc-label">최종 금액</span>
+      <span class="calc-value" id="calc-final">$3,000</span>
+      <span class="calc-multiplier" id="calc-multiplier">3.0×</span>
+    </div>
+    <div class="calc-chart-wrapper">
+      <canvas id="calc-chart"></canvas>
+    </div>
+    <p class="calc-note">
+      ⚠️ APY는 <strong>연 환산 수익률</strong>이며, 매월 복리로 계산합니다. 현실의 DeFi에서는 토큰 가격 하락, 임퍼머넌트 로스, 스마트 컨트랙트 리스크 등으로 이 수치가 거의 그대로 실현되지 않습니다.
+    </p>
+  </div>
+
   <section class="section">
     <h2>⚔️ 문제 1: 유동성 용병(Liquidity Mercenary)</h2>
     <p>
@@ -130,6 +159,86 @@
 <a href="https://open.kakao.com/o/s50Yrt1f" target="_blank" rel="noopener noreferrer" class="kakao-chat-button" aria-label="카카오톡 1:1 문의로 이동">
   💬 카톡 1:1 문의
 </a>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script>
+(function() {
+  var canvas = document.getElementById('calc-chart');
+  if (!canvas || typeof Chart === 'undefined') return;
+  var ctx = canvas.getContext('2d');
+  var principalInput = document.getElementById('calc-principal');
+  var apyInput = document.getElementById('calc-apy');
+  var monthsInput = document.getElementById('calc-months');
+  var finalEl = document.getElementById('calc-final');
+  var multEl = document.getElementById('calc-multiplier');
+
+  function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  function compute() {
+    var p = Math.max(0, +principalInput.value || 0);
+    var apy = Math.max(0, +apyInput.value || 0) / 100;
+    var m = Math.floor(+monthsInput.value || 0);
+    m = Math.max(1, Math.min(120, m));
+    var r = Math.pow(1 + apy, 1/12) - 1;
+    var labels = [], data = [];
+    for (var i = 0; i <= m; i++) {
+      labels.push(i + '개월');
+      data.push(p * Math.pow(1 + r, i));
+    }
+    var finalVal = data[data.length - 1];
+    finalEl.textContent = fmt(finalVal);
+    multEl.textContent = p > 0 ? (finalVal / p).toFixed(1) + '×' : '—';
+    chart.data.labels = labels;
+    chart.data.datasets[0].data = data;
+    chart.update('none');
+  }
+
+  var chart = new Chart(ctx, {
+    type: 'line',
+    data: { labels: [], datasets: [{
+      label: '잔액',
+      data: [],
+      borderColor: '#7c3aed',
+      backgroundColor: 'rgba(124, 58, 237, 0.12)',
+      borderWidth: 2.5,
+      fill: true,
+      tension: 0.35,
+      pointRadius: 3,
+      pointHoverRadius: 6,
+      pointBackgroundColor: '#7c3aed'
+    }]},
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1e293b',
+          padding: 10,
+          cornerRadius: 8,
+          callbacks: { label: function(c){ return fmt(c.parsed.y); } }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: { callback: function(v){ return '$' + v.toLocaleString(); }, color: '#64748b' },
+          grid: { color: 'rgba(124, 58, 237, 0.08)' }
+        },
+        x: {
+          ticks: { color: '#64748b', maxRotation: 0, autoSkipPadding: 12 },
+          grid: { display: false }
+        }
+      }
+    }
+  });
+
+  [principalInput, apyInput, monthsInput].forEach(function(el){
+    el.addEventListener('input', compute);
+  });
+  compute();
+})();
+</script>
 
 </body>
 </html>
