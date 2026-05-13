@@ -842,3 +842,43 @@ footer a { color: var(--purple); }
   body::before { width: 350px; height: 350px; }
   body::after { width: 320px; height: 320px; }
 }
+
+/* ============ KAKAO CHAT FLOATING BUTTON ============ */
+.kakao-chat-button {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 22px;
+  background: #FEE500;
+  color: #1A1A1A;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  opacity: 0.95;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  cursor: pointer;
+}
+.kakao-chat-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  opacity: 1;
+}
+.kakao-chat-button:focus-visible {
+  outline: 2px solid #7c3aed;
+  outline-offset: 3px;
+}
+@media (max-width: 768px) {
+  .kakao-chat-button {
+    bottom: 16px;
+    right: 16px;
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+}
