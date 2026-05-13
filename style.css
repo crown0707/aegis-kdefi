@@ -117,12 +117,26 @@ a:hover { color: var(--purple-light); }
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   color: var(--purple);
   font-weight: 800;
   font-size: 1.18rem;
   letter-spacing: -0.01em;
 }
 .brand:hover { color: var(--purple-light); }
+.brand-logo {
+  display: block;
+  height: 44px;
+  width: auto;
+  border-radius: 6px;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  .brand-logo { height: 36px; }
+  .brand { font-size: 1.05rem; gap: 8px; }
+}
 
 .nav-links {
   display: flex;
