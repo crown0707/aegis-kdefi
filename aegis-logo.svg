@@ -1,0 +1,23 @@
+<svg viewBox="0 0 680 760" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Aegis Defi Logo</title>
+  <desc>Aegis_Defi 로고</desc>
+  <defs>
+    <linearGradient id="shieldFill" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#fce7f3"/>
+      <stop offset="50%" stop-color="#f3e8ff"/>
+      <stop offset="100%" stop-color="#ddd6fe"/>
+    </linearGradient>
+    <linearGradient id="shieldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+  </defs>
+  <path d="M340 80 L510 160 L510 420 Q510 605 340 700 Q170 605 170 420 L170 160 Z" fill="url(#shieldFill)" stroke="url(#shieldBorder)" stroke-width="12" stroke-linejoin="round"/>
+  <path d="M340 130 L475 195 L475 420 Q475 580 340 660 Q205 580 205 420 L205 195 Z" fill="none" stroke="url(#shieldBorder)" stroke-width="2.5" stroke-opacity="0.35" stroke-linejoin="round"/>
+  <g fill="white">
+    <rect x="326" y="260" width="28" height="270" rx="14"/>
+    <rect x="248" y="304" width="184" height="22" rx="11"/>
+    <rect x="248" y="466" width="184" height="22" rx="11"/>
+  </g>
+</svg>
