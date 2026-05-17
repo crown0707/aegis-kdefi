@@ -850,7 +850,7 @@ footer {
   border-top: 1px solid var(--lavender-200);
 }
 
-footer p { margin: 0; color: var(--ink-soft); }
+footer p { margin: 4px 0; color: var(--ink-soft); }
 footer a { color: var(--purple); }
 
 /* ============ RESPONSIVE ============ */
@@ -1398,6 +1398,341 @@ footer a { color: var(--purple); }
   font-size: 0.92rem;
   line-height: 1.6;
   text-align: center;
+}
+
+/* ============ HOMEPAGE: LEAD SUB + PROMISE SECTION ============ */
+.hero .lead-sub {
+  margin: 10px 0 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--purple);
+  letter-spacing: -0.005em;
+}
+.promise-section {
+  margin: 36px 0 28px;
+  padding: 32px 28px;
+  background: linear-gradient(135deg, #faf5ff 0%, #fdf2f8 100%);
+  border: 1px solid var(--lavender-200);
+  border-radius: 22px;
+}
+.promise-title {
+  margin: 0 0 22px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.promise-card {
+  background: var(--white);
+  border: 1px solid var(--lavender-200);
+  border-radius: 16px;
+  padding: 22px 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.promise-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+}
+.promise-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.promise-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--purple);
+  letter-spacing: -0.01em;
+}
+.promise-card p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+.promise-card p strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* ============ CASE STUDY: SOURCE QUOTE BLOCK ============ */
+.case-source-block {
+  margin: 36px 0 24px;
+  padding: 26px 28px 22px;
+  background: #f8fafc;
+  border-left: 4px dashed #a855f7;
+  border-radius: 0 14px 14px 0;
+}
+.case-source-label {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--purple);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.case-source-quote {
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--ink);
+  font-style: italic;
+  border: none;
+}
+.case-source-attr {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+/* ============ CASE STUDY: SECTION TITLES ============ */
+.case-section-title {
+  margin: 48px 0 8px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.case-section-sub {
+  margin: 0 0 22px;
+  color: var(--ink-soft);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+/* ============ CASE STUDY: 3-TIER ANALYSIS CARDS ============ */
+.case-analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.case-analysis-card {
+  background: var(--white);
+  border: 1px solid var(--lavender-200);
+  border-radius: 18px;
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.case-card-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f1f5f9;
+  margin-bottom: 4px;
+}
+.case-card-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+.case-card-head h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.case-tier {
+  padding: 12px 14px;
+  border-radius: 10px;
+}
+.case-tier p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--ink);
+}
+.case-tier p strong { font-weight: 700; }
+.case-tier-label {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.case-tier-marketing {
+  background: #f5f3ff;
+}
+.case-tier-marketing .case-tier-label { color: #7c3aed; }
+.case-tier-reality {
+  background: #f8fafc;
+}
+.case-tier-reality .case-tier-label { color: #475569; }
+.case-tier-warning {
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
+}
+.case-tier-warning .case-tier-label { color: #c2410c; }
+.case-tier-warning p { color: #7c2d12; }
+
+/* ============ LINE-BY-LINE DECODE ROWS ============ */
+.line-decode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.line-decode-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  background: var(--white);
+  border: 1px solid var(--lavender-200);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.decode-side {
+  padding: 18px 20px;
+}
+.decode-side-label {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.decode-side p {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+.decode-marketing {
+  background: #f5f3ff;
+  border-right: 1px dashed #ddd6fe;
+}
+.decode-marketing .decode-side-label { color: #7c3aed; }
+.decode-marketing p {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--ink);
+}
+.decode-reality {
+  background: #fef2f2;
+}
+.decode-reality .decode-side-label { color: #b91c1c; }
+.decode-reality p { color: #7f1d1d; }
+.decode-reality p strong { color: #991b1b; font-weight: 700; }
+.decode-mark {
+  display: inline-block;
+  margin-right: 4px;
+}
+.decode-mark.decode-warn { /* no extra style — emoji color is fixed */ }
+@media (max-width: 640px) {
+  .line-decode-row { grid-template-columns: 1fr; }
+  .decode-marketing { border-right: none; border-bottom: 1px dashed #ddd6fe; }
+}
+
+/* ============ LESSON CARDS (constructive: green/blue tone) ============ */
+.lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+.lesson-card {
+  background: linear-gradient(135deg, #ecfdf5 0%, #eff6ff 100%);
+  border: 1px solid #a7f3d0;
+  border-left: 4px solid #10b981;
+  border-radius: 16px;
+  padding: 22px 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.lesson-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(16, 185, 129, 0.12);
+}
+.lesson-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+.lesson-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #065f46;
+  letter-spacing: -0.01em;
+}
+.lesson-card p {
+  margin: 0;
+  color: #134e4a;
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+.lesson-card p strong {
+  color: #047857;
+  font-weight: 700;
+}
+
+/* ============ RELATED LINKS GRID ============ */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.related-card {
+  background: var(--white);
+  border: 1px solid var(--lavender-200);
+  border-radius: 14px;
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  color: inherit;
+}
+.related-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--purple);
+  box-shadow: var(--shadow-sm);
+  color: inherit;
+}
+.related-num {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: var(--purple);
+  letter-spacing: 0.08em;
+}
+.related-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.related-card p {
+  margin: 4px 0 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+/* ============ FOOTER (unified platform footer) ============ */
+footer .footer-copyright {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  opacity: 0.75;
+}
+footer p strong {
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 /* ============ KAKAO CHAT FLOATING BUTTON ============ */
